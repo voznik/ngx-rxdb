@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ngx-odm</title>
+        <title>tools</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">ngx-odm</a>
+            <a href="../" class="navbar-brand">tools</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -56,7 +57,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>libs/rxdb/src/lib/rxdb.service.ts</code>
+            <code>/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts</code>
         </p>
 
 
@@ -66,6 +67,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#dbInstance">dbInstance</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -101,6 +117,20 @@
                             <li>
                                     <span class="modifier">Async</span>
                                 <a href="#initDb">initDb</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Static</span>
+                                <a href="#mergeConfig">mergeConfig</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                    <span class="modifier">Async</span>
+                                <a href="#prepareCollections">prepareCollections</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#prepareDbDump">prepareDbDump</a>
                             </li>
                             <li>
                                 <a href="#syncAllCollections">syncAllCollections</a>
@@ -151,7 +181,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:79</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="80" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:80</a></div>
                             </td>
                         </tr>
 
@@ -188,8 +218,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="85"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:85</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="86"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:86</a></div>
                 </td>
             </tr>
 
@@ -227,8 +257,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="177"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:177</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="173"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:173</a></div>
                 </td>
             </tr>
 
@@ -299,8 +329,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="54"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:54</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:55</a></div>
                 </td>
             </tr>
 
@@ -398,15 +428,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>importDbDump(dumpObj: <a href="../interfaces/NgxRxdbDump.html">NgxRxdbDump</a>)</code>
+                    <code>importDbDump(dump: <a href="../classes/NgxRxdbDump.html">Partial<NgxRxdbDump></a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="243"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:243</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="237"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:237</a></div>
                 </td>
             </tr>
 
@@ -428,9 +458,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>dumpObj</td>
+                                    <td>dump</td>
                                     <td>
-                                                <code><a href="../interfaces/NgxRxdbDump.html" target="_self" >NgxRxdbDump</a></code>
+                                                <code><a href="../classes/NgxRxdbDump.html" target="_self" >Partial&lt;NgxRxdbDump&gt;</a></code>
                                     </td>
 
                                     <td>
@@ -472,15 +502,15 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>initCollection(schemaConfig: <a href="../interfaces/NgxRxdbCollectionConfig.html">NgxRxdbCollectionConfig</a>)</code>
+                    <code>initCollection(colConfig: <a href="../interfaces/NgxRxdbCollectionConfig.html">NgxRxdbCollectionConfig</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="139"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:139</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="135"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:135</a></div>
                 </td>
             </tr>
 
@@ -500,7 +530,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>schemaConfig</td>
+                                    <td>colConfig</td>
                                     <td>
                                                 <code><a href="../interfaces/NgxRxdbCollectionConfig.html" target="_self" >NgxRxdbCollectionConfig</a></code>
                                     </td>
@@ -544,21 +574,23 @@
             <tr>
                 <td class="col-md-4">
                     <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>initCollections(schemaConfigs: literal type)</code>
+                    <code>initCollections(colConfigs: literal type)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="123"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:123</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="125"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:125</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>uses bulk <code>addCollections</code> method at the end of array </p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -572,7 +604,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>schemaConfigs</td>
+                                    <td>colConfigs</td>
                                     <td>
                                             <code>literal type</code>
                                     </td>
@@ -623,8 +655,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="97"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:97</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="98"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:98</a></div>
                 </td>
             </tr>
 
@@ -678,6 +710,226 @@ to ensure the database exists before the angular-app starts up</p>
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="mergeConfig"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Static</span>
+                            mergeConfig
+                        </b>
+                        <a href="#mergeConfig"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>mergeConfig(config: <a href="../interfaces/NgxRxdbConfig.html">NgxRxdbConfig</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="51"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:51</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>config</td>
+                                    <td>
+                                                <code><a href="../interfaces/NgxRxdbConfig.html" target="_self" >NgxRxdbConfig</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../interfaces/NgxRxdbConfig.html" target="_self" >NgxRxdbConfig</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="prepareCollections"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            <span class="modifier">Async</span>
+                            prepareCollections
+                        </b>
+                        <a href="#prepareCollections"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>prepareCollections(colConfigs: literal type)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="251"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:251</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>colConfigs</td>
+                                    <td>
+                                            <code>literal type</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;literal type&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="prepareDbDump"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            prepareDbDump
+                        </b>
+                        <a href="#prepareDbDump"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>prepareDbDump(dumpObj: <a href="../classes/NgxRxdbDump.html">Partial<NgxRxdbDump></a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="274"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:274</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>change schemaHashes from dump to existing schema hashes </p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>dumpObj</td>
+                                    <td>
+                                                <code><a href="../classes/NgxRxdbDump.html" target="_self" >Partial&lt;NgxRxdbDump&gt;</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../classes/NgxRxdbDump.html" target="_self" >NgxRxdbDump</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="syncAllCollections"></a>
                     <span class="name">
                         <b>
@@ -696,8 +948,8 @@ to ensure the database exists before the angular-app starts up</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="220"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:220</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="216"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:216</a></div>
                 </td>
             </tr>
 
@@ -784,8 +1036,8 @@ to ensure the database exists before the angular-app starts up</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="187"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:187</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="183"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:183</a></div>
                 </td>
             </tr>
 
@@ -865,6 +1117,40 @@ to ensure the database exists before the angular-app starts up</p>
         </tbody>
     </table>
 </section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="dbInstance"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            dbInstance</b>
+                            <a href="#dbInstance"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>RxDatabase</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:49</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
             <section>
     <h3 id="accessors">
@@ -886,7 +1172,7 @@ to ensure the database exists before the angular-app starts up</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:66</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="67" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:67</a></div>
                                 </td>
                             </tr>
 
@@ -908,7 +1194,7 @@ to ensure the database exists before the angular-app starts up</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:70</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="71" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:71</a></div>
                                 </td>
                             </tr>
 
@@ -930,7 +1216,7 @@ to ensure the database exists before the angular-app starts up</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:74</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:75</a></div>
                                 </td>
                             </tr>
 
@@ -941,7 +1227,7 @@ to ensure the database exists before the angular-app starts up</p>
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="77" class="link-to-prism">libs/rxdb/src/lib/rxdb.service.ts:77</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="78" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:78</a></div>
                                 </td>
                             </tr>
                     <tr>
@@ -1000,14 +1286,15 @@ import { RxDBJsonDumpPlugin } from &#x27;rxdb/plugins/json-dump&#x27;;
 import { RxDBMigrationPlugin } from &#x27;rxdb/plugins/migration&#x27;;
 import { RxDBQueryBuilderPlugin } from &#x27;rxdb/plugins/query-builder&#x27;;
 import { RxDBReplicationPlugin } from &#x27;rxdb/plugins/replication&#x27;;
+import { RxDBUpdatePlugin } from &#x27;rxdb/plugins/update&#x27;;
 import { RxDBValidatePlugin } from &#x27;rxdb/plugins/validate&#x27;;
 // NgxRxdb
-import { NgxRxdbCollectionCreator } from &#x27;./rxdb-collection.class&#x27;;
 import {
-  NgxRxdbCollectionConfig,
-  NgxRxdbConfig,
+  NgxRxdbCollectionCreator,
+  NgxRxdbCollectionDump,
   NgxRxdbDump,
-} from &#x27;./rxdb.interface&#x27;;
+} from &#x27;./rxdb-collection.class&#x27;;
+import { NgxRxdbCollectionConfig, NgxRxdbConfig } from &#x27;./rxdb.interface&#x27;;
 import { DEFAULT_BACKOFF_FN, RXDB_DEFAULT_CONFIG } from &#x27;./rxdb.model&#x27;;
 import { isEmpty, logFn, NgxRxdbError } from &#x27;./utils&#x27;;
 
@@ -1019,11 +1306,11 @@ addRxPlugin(RxDBJsonDumpPlugin);
 addRxPlugin(RxDBAdapterCheckPlugin);
 addRxPlugin(RxDBMigrationPlugin);
 addRxPlugin(RxDBReplicationPlugin);
+addRxPlugin(RxDBUpdatePlugin);
 // only in development environment
 if ((window as any).process?.env?.TEST) {
   logFn(&#x27;dev or test mode&#x27;);
-  // addRxPlugin(require(&#x27;pouchdb-adapter-memory&#x27;));
-  // addRxPlugin(RxDBDevModePlugin); // FIXME: is it duplicate import ?
+  // addRxPlugin(require(&#x27;pouchdb-adapter-memory&#x27;)); // FIXME: is it duplicate import ?
 }
 
 const IMPORTED_FLAG &#x3D; &#x27;_ngx_rxdb_imported&#x27;;
@@ -1085,18 +1372,18 @@ export class NgxRxdbService {
       const db: RxDatabase &#x3D; await createRxDatabase(dbConfig);
       this.dbInstance &#x3D; db;
       logFn(&#x27;created database&#x27;);
-      // also can create collections from root config
-      if (!isEmpty(config.options) &amp;&amp; !isEmpty(config.options.schemas)) {
-        await this.initCollections(config.options.schemas);
+      // TODO: should the instance becomes leader
+      // await this.dbInstance.waitForLeadership();
+
+      // optional: can create collections from root config
+      if (!isEmpty(dbConfig.options?.schemas)) {
+        await this.initCollections(dbConfig.options.schemas);
       }
-      if (!isEmpty(config.options) &amp;&amp; config.options.dumpPath) {
+      if (dbConfig.options?.dumpPath) {
         // fetch dump json
-        const dump &#x3D; await (await fetch(config.options.dumpPath)).json();
+        const dump &#x3D; await (await fetch(dbConfig.options.dumpPath)).json();
         // import only new dump
-        if (
-          !this._imported ||
-          this._imported !&#x3D;&#x3D; dump[&#x27;timestamp&#x27;].toString()
-        ) {
+        if (!this._imported || this._imported !&#x3D;&#x3D; dump.timestamp?.toString()) {
           await this.importDbDump(dump);
         }
       }
@@ -1105,58 +1392,53 @@ export class NgxRxdbService {
     }
   }
 
-  async initCollections(schemaConfigs: {
-    [key: string]: NgxRxdbCollectionConfig;
-  }) {
+  /** uses bulk &#x60;addCollections&#x60; method at the end of array */
+  async initCollections(colConfigs: { [key: string]: NgxRxdbCollectionConfig }) {
     try {
-      const collectionCreators &#x3D; await this.prepareCollections(schemaConfigs);
-      // use bulk &#x60;addCollections&#x60; method at the end of array
-      const bulk &#x3D; await this.dbInstance.addCollections(collectionCreators);
-      logFn(
-        &#x60;created ${Object.keys(bulk).length} collections bulk, &#x60;,
-        Object.keys(bulk)
-      );
+      const colCreators &#x3D; await this.prepareCollections(colConfigs);
+      const bulk &#x3D; await this.dbInstance.addCollections(colCreators);
+      logFn(&#x60;created ${Object.keys(bulk).length} collections bulk, &#x60;, Object.keys(bulk));
     } catch (error) {
       throw new NgxRxdbError(error.message ?? error);
     }
   }
 
-  async initCollection(schemaConfig: NgxRxdbCollectionConfig) {
-    let collection: RxCollection &#x3D; this.db[schemaConfig.name];
-    if (isRxCollection(collection)) {
-      // delete collection if exists
-      if (schemaConfig.options.recreate) {
-        return await collection.remove();
+  async initCollection(colConfig: NgxRxdbCollectionConfig) {
+    let col: RxCollection &#x3D; this.db[colConfig.name];
+    if (isRxCollection(col)) {
+      // delete  data in collection if exists
+      if (colConfig.options.recreate) {
+        await col.remove();
       }
-      logFn(&#x27;collection&#x27;, collection.name, &#x27;exists, skip create&#x27;);
-      return collection;
+      logFn(&#x27;collection&#x27;, col.name, &#x27;exists, skip create&#x27;);
+      return col;
     }
 
-    const collectionCreator &#x3D; await this.prepareCollections({
-      [schemaConfig.name]: schemaConfig,
+    const colCreator &#x3D; await this.prepareCollections({
+      [colConfig.name]: colConfig,
     });
-    collection &#x3D; (await this.dbInstance.addCollections(collectionCreator))[
-      schemaConfig.name
-    ];
-    logFn(&#x60;created collection &quot;${collection.name}&quot;&#x60;);
-    // preload data into collection
-    const docsCount &#x3D; await collection.countAllDocuments();
-    logFn(
-      &#x60;collection &quot;${collection.name}&quot; has &quot;${parseInt(docsCount, 0)}&quot; docs&#x60;
-    );
-    if (schemaConfig.options?.initialDocs &amp;&amp; !!!docsCount) {
-      const dumpObj &#x3D; {
-        name,
-        schemaHash: collection.schema.hash,
-        encrypted: false,
-        docs: [...schemaConfig.options.initialDocs],
-      };
-      await collection.importDump(dumpObj as any);
-      logFn(
-        &#x60;imported ${schemaConfig.options.initialDocs.length} docs for collection &quot;${name}&quot;&#x60;
-      );
+    col &#x3D; (await this.dbInstance.addCollections(colCreator))[colConfig.name];
+    logFn(&#x60;created collection &quot;${col.name}&quot;&#x60;);
+
+    if (colConfig.options?.initialDocs) {
+      const info &#x3D; await col.info();
+      const count &#x3D; await col.countAllDocuments();
+      if (!count &amp;&amp; info.update_seq &lt;&#x3D; 1) {
+        logFn(&#x60;collection &quot;${col.name}&quot; has &quot;${parseInt(count, 0)}&quot; docs&#x60;);
+        // preload data into collection
+        const dump &#x3D; new NgxRxdbCollectionDump({
+          name: col.name,
+          schemaHash: col.schema.hash,
+          docs: colConfig.options.initialDocs,
+        });
+        await col.importDump(dump);
+        logFn(
+          &#x60;imported ${colConfig.options.initialDocs.length} docs for collection &quot;${col.name}&quot;&#x60;
+        );
+      }
     }
-    return collection;
+
+    return col;
   }
 
   getCollection(name: string): RxCollection {
@@ -1207,9 +1489,7 @@ export class NgxRxdbService {
     customHeaders?: { [h: string]: string }
   ): RxReplicationState[] {
     if (isEmpty(this.collections)) {
-      throw new NgxRxdbError(
-        &#x27;collections must be initialized before importing dump&#x27;
-      );
+      throw new NgxRxdbError(&#x27;collections must be initialized before importing dump&#x27;);
     }
     const replicationStates: RxReplicationState[] &#x3D; [];
     Object.values(this.collections)
@@ -1225,27 +1505,26 @@ export class NgxRxdbService {
   /**
    * imports pouchdb dump to the database, must be used only after db init
    */
-  async importDbDump(dumpObj: NgxRxdbDump) {
+  async importDbDump(dump: Partial&lt;NgxRxdbDump&gt;) {
     try {
-      const dump &#x3D; this.prepareDump(dumpObj);
-      await this.db.importDump(dump as any);
+      await this.db.importDump(this.prepareDbDump(dump));
       this._imported &#x3D; dump.timestamp;
     } catch (error) {
       if (error.status !&#x3D;&#x3D; 409) {
         throw new NgxRxdbError(error.message ?? error);
       } else {
         // impoted but were conflicts with old docs - mark as imported
-        this._imported &#x3D; dumpObj.timestamp;
+        this._imported &#x3D; dump.timestamp;
       }
     }
   }
 
-  private async prepareCollections(schemaConfigs: {
+  private async prepareCollections(colConfigs: {
     [key: string]: NgxRxdbCollectionConfig;
   }): Promise&lt;{ [key: string]: RxCollectionCreator }&gt; {
     try {
-      const collectionCreators &#x3D; {};
-      const configs &#x3D; Object.values(schemaConfigs);
+      const colCreators &#x3D; {};
+      const configs &#x3D; Object.values(colConfigs);
       for (const config of configs) {
         // optionally fetch schema from remote url
         if (!config.schema &amp;&amp; !!config.options.schemaUrl) {
@@ -1254,27 +1533,26 @@ export class NgxRxdbService {
           );
         }
         checkSchema(config.schema);
-        collectionCreators[config.name] &#x3D; new NgxRxdbCollectionCreator(config);
+        colCreators[config.name] &#x3D; new NgxRxdbCollectionCreator(config);
       }
-      return collectionCreators;
+      return colCreators;
     } catch (error) {
       throw new NgxRxdbError(error.message ?? error);
     }
   }
 
   /** change schemaHashes from dump to existing schema hashes */
-  private prepareDump(dumpObj: NgxRxdbDump): NgxRxdbDump {
-    const dumpWithHashes &#x3D; { ...dumpObj };
+  private prepareDbDump(dumpObj: Partial&lt;NgxRxdbDump&gt;): NgxRxdbDump {
+    const dumpWithHashes &#x3D; new NgxRxdbDump(dumpObj);
     if (isEmpty(this.collections)) {
-      throw new NgxRxdbError(
-        &#x27;collections must be initialized before importing dump&#x27;
-      );
+      throw new NgxRxdbError(&#x27;collections must be initialized before importing&#x27;);
     }
-    for (const key in this.collections) {
-      if (dumpWithHashes.collections.hasOwnProperty(key)) {
-        dumpWithHashes.collections[key].schemaHash &#x3D; this.collections[
-          key
-        ].schema[&#x27;_hash&#x27;];
+    for (const dc of dumpWithHashes.collections) {
+      const col &#x3D; this.getCollection(dc.name);
+      if (col) {
+        dc.schemaHash &#x3D; col.schema[&#x27;_hash&#x27;];
+      } else {
+        throw new NgxRxdbError(&#x27;no such collection as provided in dump&#x27;);
       }
     }
     return dumpWithHashes;

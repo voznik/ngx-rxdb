@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ngx-odm</title>
+        <title>tools</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">ngx-odm</a>
+            <a href="../" class="navbar-brand">tools</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -56,7 +57,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>libs/kinto/src/lib/services/kinto.service.ts</code>
+            <code>/home/travis/build/voznik/ngx-odm/libs/kinto/src/lib/services/kinto.service.ts</code>
         </p>
 
 
@@ -66,6 +67,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#_db">_db</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -101,7 +117,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">libs/kinto/src/lib/services/kinto.service.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/kinto/src/lib/services/kinto.service.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -140,6 +156,40 @@
 </section>
 
 
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="_db"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            _db</b>
+                            <a href="#_db"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Kinto</code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/kinto/src/lib/services/kinto.service.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
 
             <section>
     <h3 id="accessors">
@@ -161,7 +211,7 @@
                 </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">libs/kinto/src/lib/services/kinto.service.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/kinto/src/lib/services/kinto.service.ts:15</a></div>
                                 </td>
                             </tr>
 
@@ -179,9 +229,7 @@ import { KintoBaseOptions } from &#x27;kinto/lib/KintoBase&#x27;;
 export type NgxKintoOptions &#x3D; KintoBaseOptions &amp; {
   custom?: any;
 };
-export const NGX_KINTO_OPTIONS &#x3D; new InjectionToken&lt;NgxKintoOptions&gt;(
-  &#x27;NgxKintoOptions&#x27;
-);
+export const NGX_KINTO_OPTIONS &#x3D; new InjectionToken&lt;NgxKintoOptions&gt;(&#x27;NgxKintoOptions&#x27;);
 
 // @dynamic
 @Injectable()

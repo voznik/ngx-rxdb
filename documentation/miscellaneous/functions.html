@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ngx-odm</title>
+        <title>tools</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">ngx-odm</a>
+            <a href="../" class="navbar-brand">tools</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -58,22 +59,13 @@
                 <td class="col-md-4">
                     <ul class="index-list">
                         <li>
-                            <a href="#countAllDocumentsFn" title="libs/rxdb/src/lib/rxdb-collection.class.ts"><b>countAllDocumentsFn</b>&nbsp;&nbsp;&nbsp;(libs/.../rxdb-collection.class.ts)</a>
+                            <a href="#countAllDocumentsFn" title="/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts"><b>countAllDocumentsFn</b>&nbsp;&nbsp;&nbsp;(/.../rxdb-collection.class.ts)</a>
                         </li>
                         <li>
-                            <a href="#dbInitializerFactory" title="libs/rxdb/src/lib/rxdb.module.ts"><b>dbInitializerFactory</b>&nbsp;&nbsp;&nbsp;(libs/.../rxdb.module.ts)</a>
+                            <a href="#dbInitializerFactory" title="/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts"><b>dbInitializerFactory</b>&nbsp;&nbsp;&nbsp;(/.../rxdb.module.ts)</a>
                         </li>
                         <li>
-                            <a href="#idLengthFn" title="libs/rxdb/src/lib/rxdb-collection.class.ts"><b>idLengthFn</b>&nbsp;&nbsp;&nbsp;(libs/.../rxdb-collection.class.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#isEmpty" title="libs/rxdb/src/lib/utils.ts"><b>isEmpty</b>&nbsp;&nbsp;&nbsp;(libs/.../utils.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#logFn" title="libs/rxdb/src/lib/utils.ts"><b>logFn</b>&nbsp;&nbsp;&nbsp;(libs/.../utils.ts)</a>
-                        </li>
-                        <li>
-                            <a href="#noop" title="libs/rxdb/src/lib/utils.ts"><b>noop</b>&nbsp;&nbsp;&nbsp;(libs/.../utils.ts)</a>
+                            <a href="#infoFn" title="/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts"><b>infoFn</b>&nbsp;&nbsp;&nbsp;(/.../rxdb-collection.class.ts)</a>
                         </li>
                     </ul>
                 </td>
@@ -82,7 +74,7 @@
     </table>
 </section>
 
-    <h3>libs/rxdb/src/lib/rxdb-collection.class.ts</h3>
+    <h3>/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
@@ -121,18 +113,18 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="idLengthFn"></a>
+                    <a name="infoFn"></a>
                     <span class="name">
                         <b>
-                            idLengthFn
+                            infoFn
                         </b>
-                        <a href="#idLengthFn"><span class="icon ion-ios-link"></span></a>
+                        <a href="#infoFn"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>idLengthFn()</code>
+<code>infoFn()</code>
                 </td>
             </tr>
 
@@ -141,7 +133,7 @@
 
         </tbody>
     </table>
-</section>    <h3>libs/rxdb/src/lib/rxdb.module.ts</h3>
+</section>    <h3>/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts</h3>
     <section>
     <h3></h3>    <table class="table table-sm table-bordered">
         <tbody>
@@ -167,6 +159,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>run at APP_INITIALIZER cycle </p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -207,160 +201,6 @@
                     </div>
                     <div class="io-description">
                         
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</section>    <h3>libs/rxdb/src/lib/utils.ts</h3>
-    <section>
-    <h3></h3>    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="isEmpty"></a>
-                    <span class="name">
-                        <b>
-                            isEmpty
-                        </b>
-                        <a href="#isEmpty"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>isEmpty(object, deep)</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>object</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>deep</td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="logFn"></a>
-                    <span class="name">
-                        <b>
-                            logFn
-                        </b>
-                        <a href="#logFn"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>logFn(...args: any[])</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Parameters :</b>
-                        <table class="params">
-                            <thead>
-                                <tr>
-                                    <td>Name</td>
-                                    <td>Type</td>
-                                    <td>Optional</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>args</td>
-                                    <td>
-                                            <code>any[]</code>
-                                    </td>
-
-                                    <td>
-                                        No
-                                    </td>
-
-
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="noop"></a>
-                    <span class="name">
-                        <b>
-                            noop
-                        </b>
-                        <a href="#noop"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>noop()</code>
-                </td>
-            </tr>
-
-
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
-
                     </div>
                 </td>
             </tr>

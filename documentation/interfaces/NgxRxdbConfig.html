@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ngx-odm</title>
+        <title>tools</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">ngx-odm</a>
+            <a href="../" class="navbar-brand">tools</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -61,7 +62,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>libs/rxdb/src/lib/rxdb.interface.ts</code>
+            <code>/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.interface.ts</code>
         </p>
 
 
@@ -142,6 +143,7 @@
   MangoQuery,
   RxCollectionCreator,
   RxDatabaseCreator,
+  RxDumpDatabaseAny,
   SyncOptions,
 } from &#x27;rxdb&#x27;;
 
@@ -162,24 +164,7 @@ export interface NgxRxdbConfig extends RxDatabaseCreator {
   };
 }
 
-export interface NgxRxdbDump {
-  name: string;
-  instanceToken?: string;
-  encrypted?: boolean;
-  passwordHash?: string;
-  collections: { [key: string]: any };
-  timestamp: number;
-}
-
-export type AnyValue &#x3D;
-  | undefined
-  | null
-  | boolean
-  | string
-  | number
-  | object
-  | Date
-  | any[];
+export type AnyValue &#x3D; undefined | null | boolean | string | number | object | Date | any[];
 export type AnyObject &#x3D; { [key: string]: AnyValue };
 </code></pre>
     </div>

@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ngx-odm</title>
+        <title>tools</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">ngx-odm</a>
+            <a href="../" class="navbar-brand">tools</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -60,7 +61,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>libs/rxdb/src/lib/utils.ts</code>
+            <code>/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/utils.ts</code>
         </p>
 
 
@@ -114,7 +115,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">libs/rxdb/src/lib/utils.ts:28</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/utils.ts:31</a></div>
                             </td>
                         </tr>
 
@@ -191,7 +192,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">libs/rxdb/src/lib/utils.ts:29</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/utils.ts:32</a></div>
                             </td>
                         </tr>
 
@@ -215,26 +216,28 @@
     return true;
   } else {
     if (Object.keys(object).length) {
-      return deep
-        ? Object.values(object).every(val &#x3D;&gt; val &#x3D;&#x3D;&#x3D; null || !!!val)
-        : false;
+      return deep ? Object.values(object).every(val &#x3D;&gt; val &#x3D;&#x3D;&#x3D; null || !!!val) : false;
     }
     return true;
   }
 }
 
+/** @internal */
 export function noop(): void {
   return void 0;
 }
 
+/** @internal */
 export function logFn(...args) {
-  // tslint:disable-next-line: no-console
-  console.log.call(
-    console,
-    &#x60;%c[DEBUG:: NgxRxdb::]&#x60;,
-    &#x27;background: #8d2089; color: #fff; padding: 2px; font-size: normal;&#x27;,
-    ...args
-  );
+  if ((window as any).process?.env?.DEBUG) {
+    // tslint:disable-next-line: no-console
+    console.log.call(
+      console,
+      &#x60;%c[DEBUG:: NgxRxdb::]&#x60;,
+      &#x27;background: #8d2089; color: #fff; padding: 2px; font-size: normal;&#x27;,
+      ...args
+    );
+  }
 }
 
 export class NgxRxdbError extends Error {

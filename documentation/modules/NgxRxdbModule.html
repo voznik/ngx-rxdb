@@ -3,17 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ngx-odm</title>
+        <title>tools</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
     </head>
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">ngx-odm</a>
+            <a href="../" class="navbar-brand">tools</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -54,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>libs/rxdb/src/lib/rxdb.module.ts</code>
+            <code>/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts</code>
         </p>
 
 
@@ -62,7 +63,52 @@
             <h3>Description</h3>
         </p>
         <p class="comment">
-            <p>main module which should be imported once in app module, will init RxDbDatabase with given configuration</p>
+            <p>Main module which should be imported once in app module, will init RxDbDatabase with given configuration</p>
+<h3 id="installation">Installation</h3>
+<p>1) Import <code>NgxRxdbModule</code> to your root module.</p>
+<p>```ts</p>
+<ul>
+<li>@NgModule({</li>
+<li>imports: [</li>
+<li>// ...</li>
+<li>NgxRxdbModule.forRoot(</li>
+<li>{</li>
+<li>name: &#39;demo&#39;,          // &lt;- name (required, &#39;ngx&#39;)</li>
+<li>adapter: &#39;idb&#39;,        // &lt;- storage-adapter (required, default: &#39;idb&#39;)</li>
+<li>multiInstance: true,   // &lt;-(optional)</li>
+<li>options: {</li>
+<li>dumpPath: &#39;assets/data/db.dump.json&#39;, // &lt;- remote url (optional)</li>
+<li>},</li>
+<li>})</li>
+<li>],</li>
+<li>})</li>
+<li>export class AppModule { }</li>
+<li><div><pre class="line-numbers"><code class="language-none"></code></pre></div></li>
+</ul>
+<p>2) Import <code>NgxRxdbModule</code> to your feature module.</p>
+<p>```ts</p>
+<ul>
+<li>@NgModule({</li>
+<li>imports: [</li>
+<li>// ...</li>
+<li>NgxRxdbModule.forFeature({</li>
+<li>name: &#39;todo&#39;,</li>
+<li>// schema: todoSchema, &lt;-(kind of optional)</li>
+<li>statics: {}, // &lt;-(optional)</li>
+<li>options: { // &lt;-(optional)</li>
+<li>schemaUrl: &#39;assets/data/todo.schema.json&#39;, &lt;- remote url (optional)</li>
+<li>initialDocs: initialState.items, // &lt;-(optional)</li>
+<li>},</li>
+<li>})</li>
+<li>]</li>
+<li>}),</li>
+<li>export class TodosModule { }</li>
+<li><div><pre class="line-numbers"><code class="language-none">### Usage
+</code></pre></div></li>
+</ul>
+<p>Example of usage:
+<example-url><a href="http://localhost/demo/mysample.component.html">http://localhost/demo/mysample.component.html</a></example-url>
+<example-url>../index.html</example-url></p>
 
         </p>
 
@@ -101,8 +147,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.module.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="81"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:81</a></div>
                 </td>
             </tr>
 
@@ -173,8 +219,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="48"
-                            class="link-to-prism">libs/rxdb/src/lib/rxdb.module.ts:48</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="96"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:96</a></div>
                 </td>
             </tr>
 
@@ -244,6 +290,7 @@ import { NgxRxdbService } from &#x27;./rxdb.service&#x27;;
 import { RXDB_CONFIG, RXDB_FEATURE_CONFIG } from &#x27;./rxdb.token&#x27;;
 import { logFn, noop } from &#x27;./utils&#x27;;
 
+/** run at APP_INITIALIZER cycle */
 export function dbInitializerFactory(
   rxdb: NgxRxdbService,
   config: NgxRxdbConfig
@@ -253,7 +300,54 @@ export function dbInitializerFactory(
   };
 }
 /**
- * main module which should be imported once in app module, will init RxDbDatabase with given configuration
+ * Main module which should be imported once in app module, will init RxDbDatabase with given configuration
+ *
+ * ### Installation
+ *
+ * 1) Import &#x60;NgxRxdbModule&#x60; to your root module.
+ *
+ * &#x60;&#x60;&#x60;ts
+ * @NgModule({
+ *   imports: [
+ *     // ...
+ *     NgxRxdbModule.forRoot(
+ *       {
+ *         name: &#x27;demo&#x27;,          // &lt;- name (required, &#x27;ngx&#x27;)
+ *         adapter: &#x27;idb&#x27;,        // &lt;- storage-adapter (required, default: &#x27;idb&#x27;)
+ *         multiInstance: true,   // &lt;-(optional)
+ *         options: {
+ *           dumpPath: &#x27;assets/data/db.dump.json&#x27;, // &lt;- remote url (optional)
+ *         },
+ *       })
+ *   ],
+ * })
+ * export class AppModule { }
+ * &#x60;&#x60;&#x60;
+ *
+ * 2) Import &#x60;NgxRxdbModule&#x60; to your feature module.
+ *
+ * &#x60;&#x60;&#x60;ts
+ * @NgModule({
+ *   imports: [
+ *     // ...
+ *      NgxRxdbModule.forFeature({
+ *       name: &#x27;todo&#x27;,
+ *       // schema: todoSchema, &lt;-(kind of optional)
+ *       statics: {}, // &lt;-(optional)
+ *       options: { // &lt;-(optional)
+ *         schemaUrl: &#x27;assets/data/todo.schema.json&#x27;, &lt;- remote url (optional)
+ *         initialDocs: initialState.items, // &lt;-(optional)
+ *       },
+ *      })
+ *      ]
+ * }),
+ * export class TodosModule { }
+ * &#x60;&#x60;&#x60;
+ * ### Usage
+ *
+ * Example of usage:
+ * &lt;example-url&gt;http://localhost/demo/mysample.component.html&lt;/example-url&gt;
+ * &lt;example-url&gt;../index.html&lt;/example-url&gt;
  */
 // @dynamic
 @NgModule()
@@ -325,10 +419,8 @@ export class NgxRxdbModule {
 
     // TODO: initialize the service only when this is a Root module (&#x27;forRoot&#x27; was called)
     if (trueNgxRxdbConfig &amp;&amp; !ngxRxdbConfig) {
-      // this logic cannot be executed in an APP_INITIALIZER factory
-      // so this is done via appInitStatus.donePromise
       from(appInitStatus.donePromise).subscribe(() &#x3D;&gt; {
-        logFn(&#x27;appInitStatus.donePromise&#x27;);
+        // logFn(&#x27;appInitStatus.donePromise&#x27;);
       });
     }
   }

@@ -16,7 +16,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         <nav>
             <ul class="list">
                 <li class="title">
-                    <a href="index.html" data-type="index-link">ngx-odm</a>
+                    <a href="index.html" data-type="index-link">tools</a>
                 </li>
 
                 <li class="divider"></li>
@@ -25,38 +25,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                     <a data-type="chapter-link" href="index.html"><span class="icon ion-ios-home"></span>Getting started</a>
                     <ul class="links">
                         <li class="link">
-                            <a href="overview.html" data-type="chapter-link">
+                            <a href="index.html" data-type="chapter-link">
                                 <span class="icon ion-ios-keypad"></span>Overview
                             </a>
                         </li>
-                        <li class="link">
-                            <a href="index.html" data-type="chapter-link">
-                                <span class="icon ion-ios-paper"></span>README
-                            </a>
-                        </li>
-                                <li class="link">
-                                    <a href="dependencies.html" data-type="chapter-link">
-                                        <span class="icon ion-ios-list"></span>Dependencies
-                                    </a>
-                                </li>
                     </ul>
                 </li>
-                    <li class="chapter additional">
-                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ? 'data-target="#additional-pages"'
-                            : 'data-target="#xs-additional-pages"' }>
-                            <span class="icon ion-ios-book"></span>
-                            <span>Projects</span>
-                            <span class="icon ion-ios-arrow-down"></span>
-                        </div>
-                        <ul class="links collapse " ${ isNormalMode ? 'id="additional-pages"' : 'id="xs-additional-pages"' }>
-                                    <li class="link ">
-                                        <a href="additional-documentation/rxdb.html" data-type="entity-link" data-context-id="additional">rxdb</a>
-                                    </li>
-                                    <li class="link ">
-                                        <a href="additional-documentation/kinto.html" data-type="entity-link" data-context-id="additional">kinto</a>
-                                    </li>
-                        </ul>
-                    </li>
                     <li class="chapter modules">
                         <a data-type="chapter-link" href="modules.html">
                             <div class="menu-toggler linked" data-toggle="collapse" ${ isNormalMode ?
@@ -88,6 +62,12 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                         <ul class="links collapse " ${ isNormalMode ? 'id="classes-links"' : 'id="xs-classes-links"' }>
                             <li class="link">
                                 <a href="classes/NgxRxdbCollectionCreator.html" data-type="entity-link">NgxRxdbCollectionCreator</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/NgxRxdbCollectionDump.html" data-type="entity-link">NgxRxdbCollectionDump</a>
+                            </li>
+                            <li class="link">
+                                <a href="classes/NgxRxdbDump.html" data-type="entity-link">NgxRxdbDump</a>
                             </li>
                             <li class="link">
                                 <a href="classes/NgxRxdbError.html" data-type="entity-link">NgxRxdbError</a>
@@ -127,9 +107,6 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             <li class="link">
                                 <a href="interfaces/NgxRxdbConfig.html" data-type="entity-link">NgxRxdbConfig</a>
                             </li>
-                            <li class="link">
-                                <a href="interfaces/NgxRxdbDump.html" data-type="entity-link">NgxRxdbDump</a>
-                            </li>
                         </ul>
                     </li>
                     <li class="chapter">
@@ -151,11 +128,8 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                         </ul>
                     </li>
-                    <li class="divider"></li>
-                    <li class="copyright">
-                        Documentation generated using <a href="https://compodoc.app/" target="_blank">
-                            <img data-src="images/compodoc-vectorise.png" class="img-responsive" data-type="compodoc-logo">
-                        </a>
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="unit-test.html"><span class="icon ion-ios-podium"></span>Unit test coverage</a>
                     </li>
             </ul>
         </nav>
