@@ -1404,10 +1404,10 @@ export class NgxRxdbService {
   }
 
   async initCollection(colConfig: NgxRxdbCollectionConfig) {
-    let col: RxCollection &#x3D; this.db[colConfig.name];
+    let col: RxCollection &#x3D; this.getCollection(colConfig.name);
     if (isRxCollection(col)) {
       // delete  data in collection if exists
-      if (colConfig.options.recreate) {
+      if (colConfig.options?.recreate) {
         await col.remove();
       }
       logFn(&#x27;collection&#x27;, col.name, &#x27;exists, skip create&#x27;);
