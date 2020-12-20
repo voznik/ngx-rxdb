@@ -191,18 +191,24 @@ import { NgxRxdbAsyncNoZonePipe } from &#x27;./rxdb-async-no-zone.pipe&#x27;;
 import { NgxRxdbCollectionService } from &#x27;./rxdb-collection.service&#x27;;
 import { NgxRxdbCollectionConfig, NgxRxdbConfig } from &#x27;./rxdb.interface&#x27;;
 import { NgxRxdbService } from &#x27;./rxdb.service&#x27;;
-import { RXDB_CONFIG, RXDB_FEATURE_CONFIG } from &#x27;./rxdb.token&#x27;;
+import { RXDB_CONFIG } from &#x27;./rxdb.token&#x27;;
 import { logFn, noop } from &#x27;./utils&#x27;;
 
 /** run at APP_INITIALIZER cycle */
 export function dbInitializerFactory(
-  rxdb: NgxRxdbService,
-  config: NgxRxdbConfig
+  dbService: NgxRxdbService,
+  dbConfig: NgxRxdbConfig
 ): () &#x3D;&gt; Promise&lt;void&gt; {
   return async () &#x3D;&gt; {
-    await rxdb.initDb(config);
+    await dbService.initDb(dbConfig);
   };
 }
+
+export function collectionServiceFactory(config: NgxRxdbCollectionConfig) {
+  return (dbService: NgxRxdbService): NgxRxdbCollectionService &#x3D;&gt;
+    new NgxRxdbCollectionService(dbService, config);
+}
+
 /**
  * Main module which should be imported once in app module, will init RxDbDatabase with given configuration
  *
@@ -257,16 +263,16 @@ export function dbInitializerFactory(
 @NgModule()
 export class NgxRxdbModule {
   static forFeature(
-    config: NgxRxdbCollectionConfig
+    collectionConfig: NgxRxdbCollectionConfig
   ): ModuleWithProviders&lt;NgxRxdbFeatureModule&gt; {
     return {
       ngModule: NgxRxdbFeatureModule,
       providers: [
         {
-          provide: RXDB_FEATURE_CONFIG,
-          useValue: config,
+          provide: NgxRxdbCollectionService,
+          useFactory: collectionServiceFactory(collectionConfig),
+          deps: [NgxRxdbService],
         },
-        NgxRxdbCollectionService,
       ],
     };
   }
@@ -305,9 +311,8 @@ export class NgxRxdbModule {
     trueNgxRxdbConfig: NgxRxdbConfig,
     @Optional()
     @SkipSelf()
-    @Inject(RXDB_FEATURE_CONFIG)
-    ngxRxdbCollectionConfig: NgxRxdbCollectionConfig,
-    @Self() ngxRxdbService: NgxRxdbService
+    @Self()
+    ngxRxdbService: NgxRxdbService
   ) {
     if (!trueNgxRxdbConfig &amp;&amp; !ngxRxdbConfig) {
       throw new Error(
