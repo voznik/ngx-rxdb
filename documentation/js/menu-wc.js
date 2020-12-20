@@ -46,6 +46,21 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                             </li>
                             <li class="link">
                                 <a href="modules/NgxRxdbFeatureModule.html" data-type="entity-link">NgxRxdbFeatureModule</a>
+                                    <li class="chapter inner">
+                                        <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
+                                            'data-target="#pipes-links-module-NgxRxdbFeatureModule-78fabe5c195415632553af9ccef86e25"' : 'data-target="#xs-pipes-links-module-NgxRxdbFeatureModule-78fabe5c195415632553af9ccef86e25"' }>
+                                            <span class="icon ion-md-add"></span>
+                                            <span>Pipes</span>
+                                            <span class="icon ion-ios-arrow-down"></span>
+                                        </div>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-NgxRxdbFeatureModule-78fabe5c195415632553af9ccef86e25"' :
+                                            'id="xs-pipes-links-module-NgxRxdbFeatureModule-78fabe5c195415632553af9ccef86e25"' }>
+                                            <li class="link">
+                                                <a href="pipes/NgxRxdbAsyncNoZonePipe.html"
+                                                    data-type="entity-link" data-context="sub-entity" data-context-id="modules">NgxRxdbAsyncNoZonePipe</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                             </li>
                             <li class="link">
                                 <a href="modules/NgxRxdbModule.html" data-type="entity-link">NgxRxdbModule</a>

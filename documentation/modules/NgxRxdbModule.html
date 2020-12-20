@@ -147,8 +147,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="81"
-                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:81</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="82"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:82</a></div>
                 </td>
             </tr>
 
@@ -219,8 +219,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="96"
-                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:96</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="97"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:97</a></div>
                 </td>
             </tr>
 
@@ -284,6 +284,7 @@ import {
   SkipSelf,
 } from &#x27;@angular/core&#x27;;
 import { from } from &#x27;rxjs&#x27;;
+import { NgxRxdbAsyncNoZonePipe } from &#x27;./rxdb-async-no-zone.pipe&#x27;;
 import { NgxRxdbCollectionService } from &#x27;./rxdb-collection.service&#x27;;
 import { NgxRxdbCollectionConfig, NgxRxdbConfig } from &#x27;./rxdb.interface&#x27;;
 import { NgxRxdbService } from &#x27;./rxdb.service&#x27;;
@@ -428,7 +429,10 @@ export class NgxRxdbModule {
 /**
  * feature module which should be imported in lazy feature modules, will init RxDbCollection with given configuration
  */
-@NgModule({})
+@NgModule({
+  declarations: [NgxRxdbAsyncNoZonePipe],
+  exports: [NgxRxdbAsyncNoZonePipe],
+})
 export class NgxRxdbFeatureModule {
   constructor(public collectionService: NgxRxdbCollectionService&lt;any&gt;) {
     // init collection via loader
