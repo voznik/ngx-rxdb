@@ -48,13 +48,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/NgxRxdbFeatureModule.html" data-type="entity-link">NgxRxdbFeatureModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#pipes-links-module-NgxRxdbFeatureModule-d28a97d7f77b04a98a03e5ef61389018"' : 'data-target="#xs-pipes-links-module-NgxRxdbFeatureModule-d28a97d7f77b04a98a03e5ef61389018"' }>
+                                            'data-target="#pipes-links-module-NgxRxdbFeatureModule-a55d82d33ae25b4ac8d0d544ec93f62d"' : 'data-target="#xs-pipes-links-module-NgxRxdbFeatureModule-a55d82d33ae25b4ac8d0d544ec93f62d"' }>
                                             <span class="icon ion-md-add"></span>
                                             <span>Pipes</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-NgxRxdbFeatureModule-d28a97d7f77b04a98a03e5ef61389018"' :
-                                            'id="xs-pipes-links-module-NgxRxdbFeatureModule-d28a97d7f77b04a98a03e5ef61389018"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="pipes-links-module-NgxRxdbFeatureModule-a55d82d33ae25b4ac8d0d544ec93f62d"' :
+                                            'id="xs-pipes-links-module-NgxRxdbFeatureModule-a55d82d33ae25b4ac8d0d544ec93f62d"' }>
                                             <li class="link">
                                                 <a href="pipes/NgxRxdbAsyncNoZonePipe.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">NgxRxdbAsyncNoZonePipe</a>

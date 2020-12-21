@@ -74,35 +74,6 @@
 
 
 
-            <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
-        <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <h6><b>Properties</b></h6>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <ul class="index-list">
-                            <li>
-                                    <span class="modifier">Public</span>
-                                    <span class="modifier">Optional</span>
-                                <a href="#extra">extra</a>
-                            </li>
-                        </ul>
-                    </td>
-                </tr>
-
-
-
-
-
-
-        </tbody>
-    </table>
-</section>
 
             <section>
     <h3 id="constructor">Constructor</h3>
@@ -110,12 +81,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, extra?: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+<code>constructor(message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="31" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/utils.ts:31</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/utils.ts:33</a></div>
                             </td>
                         </tr>
 
@@ -144,18 +115,6 @@
                                                     </td>
                                                     
                                                 </tr>
-                                                <tr>
-                                                        <td>extra</td>
-                                                  
-                                                        <td>
-                                                                        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-                                                        </td>
-                                                  
-                                                    <td>
-                                                            Yes
-                                                    </td>
-                                                    
-                                                </tr>
                                         </tbody>
                                     </table>
                             </div>
@@ -165,41 +124,6 @@
         </table>
 </section>
 
-            <section>
-    
-        <h3 id="inputs">
-            Properties
-        </h3>
-        <table class="table table-sm table-bordered">
-            <tbody>
-                <tr>
-                    <td class="col-md-4">
-                        <a name="extra"></a>
-                        <span class="name">
-                            <b>
-                                <span class="modifier">Public</span>
-                                <span class="modifier">Optional</span>
-                            extra</b>
-                            <a href="#extra"><span class="icon ion-ios-link"></span></a>
-                        </span>
-                    </td>
-                </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
-
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/utils.ts:32</a></div>
-                            </td>
-                        </tr>
-
-
-            </tbody>
-        </table>
-</section>
 
 
 
@@ -211,12 +135,15 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">export function isEmpty(object, deep &#x3D; false) {
-  if (object &#x3D;&#x3D; null || !!!object) {
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AnyObject } from &#x27;./rxdb.interface&#x27;;
+
+/** @internal */
+export function isEmpty(object: AnyObject, deep &#x3D; false) {
+  if (object &#x3D;&#x3D; null || !object) {
     return true;
   } else {
     if (Object.keys(object).length) {
-      return deep ? Object.values(object).every(val &#x3D;&gt; val &#x3D;&#x3D;&#x3D; null || !!!val) : false;
+      return deep ? Object.values(object).every(val &#x3D;&gt; val &#x3D;&#x3D;&#x3D; null || !val) : false;
     }
     return true;
   }
@@ -230,7 +157,7 @@ export function noop(): void {
 /** @internal */
 export function logFn(...args) {
   if ((window as any).process?.env?.DEBUG) {
-    // tslint:disable-next-line: no-console
+    // eslint-disable-next-line no-console
     console.log.call(
       console,
       &#x60;%c[DEBUG:: NgxRxdb::]&#x60;,
@@ -241,7 +168,7 @@ export function logFn(...args) {
 }
 
 export class NgxRxdbError extends Error {
-  constructor(message: string, public extra?: any) {
+  constructor(message: string) {
     super(message);
     this.name &#x3D; this.constructor.name;
     Object.setPrototypeOf(this, NgxRxdbError.prototype);

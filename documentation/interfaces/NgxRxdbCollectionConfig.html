@@ -171,33 +171,41 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  MangoQuery,
-  RxCollectionCreator,
-  RxDatabaseCreator,
-  RxDumpDatabaseAny,
-  SyncOptions,
-} from &#x27;rxdb&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { MangoQuery, RxCollectionCreator, RxDatabaseCreator, SyncOptions } from &#x27;rxdb&#x27;;
 
 export interface NgxRxdbCollectionConfig extends Partial&lt;RxCollectionCreator&gt; {
   schema?: RxCollectionCreator[&#x27;schema&#x27;];
   options?: {
     syncOptions?: SyncOptions &amp; { queryObj?: MangoQuery&lt;any&gt; };
     schemaUrl?: string;
-    initialDocs?: any[];
+    initialDocs?: AnyObject[];
     recreate?: boolean;
   };
 }
 
 export interface NgxRxdbConfig extends RxDatabaseCreator {
   options?: {
-    schemas?: { [key: string]: NgxRxdbCollectionConfig };
+    schemas?: Record&lt;string, NgxRxdbCollectionConfig&gt;;
     dumpPath?: string;
   };
 }
 
-export type AnyValue &#x3D; undefined | null | boolean | string | number | object | Date | any[];
-export type AnyObject &#x3D; { [key: string]: AnyValue };
+export type AnyValue &#x3D;
+  | undefined
+  | null
+  | boolean
+  | string
+  | number
+  | Date
+  | Record&lt;string, unknown&gt;
+  | Record&lt;string, unknown&gt;[];
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type AnyObject&lt;T &#x3D; object&gt; &#x3D;
+  | {
+      [k in keyof T]?: AnyObject&lt;T[k]&gt;;
+    }
+  | AnyValue;
+export type AnyFn &#x3D; (...args: any[]) &#x3D;&gt; unknown;
 </code></pre>
     </div>
 </div>

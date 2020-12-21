@@ -91,6 +91,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { AsyncPipe } from &#x27;@angular/common&#x27;;
 import { Pipe, PipeTransform } from &#x27;@angular/core&#x27;;
+import { AnyObject } from &#x27;./rxdb.interface&#x27;;
 
 /**
  * @see https://github.com/pubkey/rxdb/blob/master/examples/angular/src/app/pipes/async-no-zone.pipe.ts
@@ -115,7 +116,7 @@ export class NgxRxdbAsyncNoZonePipe extends AsyncPipe implements PipeTransform {
 // monkeypatch the private method with detectChanges() instead of markForCheck()
 NgxRxdbAsyncNoZonePipe.prototype[&#x27;_updateLatestValue&#x27;] &#x3D; function (
   async: any,
-  value: object
+  value: AnyObject
 ): void {
   if (async &#x3D;&#x3D;&#x3D; this[&#x27;_obj&#x27;]) {
     this[&#x27;_latestValue&#x27;] &#x3D; value;

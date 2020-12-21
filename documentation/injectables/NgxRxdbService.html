@@ -435,8 +435,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="237"
-                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:237</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="236"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:236</a></div>
                 </td>
             </tr>
 
@@ -581,8 +581,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="125"
-                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:125</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="126"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:126</a></div>
                 </td>
             </tr>
 
@@ -621,7 +621,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                        <b>Returns : </b>    <code>{}</code>
 
                     </div>
                     <div class="io-description">
@@ -804,8 +804,8 @@ to ensure the database exists before the angular-app starts up</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="251"
-                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:251</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="250"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:250</a></div>
                 </td>
             </tr>
 
@@ -876,8 +876,8 @@ to ensure the database exists before the angular-app starts up</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="274"
-                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:274</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="273"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:273</a></div>
                 </td>
             </tr>
 
@@ -948,8 +948,8 @@ to ensure the database exists before the angular-app starts up</p>
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="216"
-                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:216</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="215"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.service.ts:215</a></div>
                 </td>
             </tr>
 
@@ -1029,7 +1029,7 @@ to ensure the database exists before the angular-app starts up</p>
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>syncCollection(col: RxCollection, remoteDbName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, customHeaders?: literal type)</code>
+<code>syncCollection(col: RxCollection, remoteDbName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, customHeaders?: Record<string | string>)</code>
                 </td>
             </tr>
 
@@ -1089,7 +1089,7 @@ to ensure the database exists before the angular-app starts up</p>
                                 <tr>
                                     <td>customHeaders</td>
                                     <td>
-                                            <code>literal type</code>
+                                            <code>Record&lt;string | string&gt;</code>
                                     </td>
 
                                     <td>
@@ -1273,6 +1273,7 @@ to ensure the database exists before the angular-app starts up</p>
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 import {
   addRxPlugin,
+  CollectionsOfDatabase,
   createRxDatabase,
   isRxCollection,
   RxCollection,
@@ -1339,7 +1340,7 @@ export class NgxRxdbService {
     return this.dbInstance;
   }
 
-  get collections(): { [key: string]: RxCollection } {
+  get collections(): CollectionsOfDatabase {
     return this.db.collections;
   }
 
@@ -1371,13 +1372,14 @@ export class NgxRxdbService {
       const dbConfig &#x3D; NgxRxdbService.mergeConfig(config);
       const db: RxDatabase &#x3D; await createRxDatabase(dbConfig);
       this.dbInstance &#x3D; db;
-      logFn(&#x27;created database&#x27;);
+      logFn(&#x60;created database ${this.db.name}&#x60;);
       // TODO: should the instance becomes leader
       // await this.dbInstance.waitForLeadership();
 
       // optional: can create collections from root config
       if (!isEmpty(dbConfig.options?.schemas)) {
-        await this.initCollections(dbConfig.options.schemas);
+        const bulk &#x3D; await this.initCollections(dbConfig.options.schemas);
+        logFn(&#x60;created ${Object.keys(bulk).length} collections bulk: ${Object.keys(bulk)}&#x60;);
       }
       if (dbConfig.options?.dumpPath) {
         // fetch dump json
@@ -1396,8 +1398,7 @@ export class NgxRxdbService {
   async initCollections(colConfigs: { [key: string]: NgxRxdbCollectionConfig }) {
     try {
       const colCreators &#x3D; await this.prepareCollections(colConfigs);
-      const bulk &#x3D; await this.dbInstance.addCollections(colCreators);
-      logFn(&#x60;created ${Object.keys(bulk).length} collections bulk, &#x60;, Object.keys(bulk));
+      return await this.dbInstance.addCollections(colCreators);
     } catch (error) {
       throw new NgxRxdbError(error.message ?? error);
     }
@@ -1454,7 +1455,7 @@ export class NgxRxdbService {
   syncCollection(
     col: RxCollection,
     remoteDbName: string &#x3D; &#x27;db&#x27;,
-    customHeaders?: { [h: string]: string }
+    customHeaders?: Record&lt;string, string&gt;
   ): RxReplicationState {
     if (col.options?.syncOptions?.remote) {
       const { syncOptions } &#x3D; col.options as NgxRxdbCollectionConfig[&#x27;options&#x27;];
@@ -1465,7 +1466,6 @@ export class NgxRxdbService {
           back_off_function: DEFAULT_BACKOFF_FN,
         },
         this.db.pouchSettings.ajax,
-        col.pouchSettings.ajax,
         syncOptions.options
       );
       // append auth headers
@@ -1527,7 +1527,7 @@ export class NgxRxdbService {
       const configs &#x3D; Object.values(colConfigs);
       for (const config of configs) {
         // optionally fetch schema from remote url
-        if (!config.schema &amp;&amp; !!config.options.schemaUrl) {
+        if (!config.schema &amp;&amp; !!config.options?.schemaUrl) {
           config.schema &#x3D; await NgxRxdbCollectionCreator.fetchSchema(
             config.options.schemaUrl
           );

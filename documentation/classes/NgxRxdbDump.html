@@ -128,7 +128,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:66</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:65</a></div>
                             </td>
                         </tr>
 
@@ -191,7 +191,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:66</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:65</a></div>
                             </td>
                         </tr>
 
@@ -217,7 +217,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:64</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:63</a></div>
                             </td>
                         </tr>
 
@@ -244,7 +244,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:62</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:61</a></div>
                             </td>
                         </tr>
 
@@ -276,7 +276,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="61" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:61</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:60</a></div>
                             </td>
                         </tr>
 
@@ -308,7 +308,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:65</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:64</a></div>
                             </td>
                         </tr>
 
@@ -335,7 +335,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:63</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="62" class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb-collection.class.ts:62</a></div>
                             </td>
                         </tr>
 
@@ -355,15 +355,14 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
-  RxJsonSchema,
-  RxCollectionCreator,
-  PouchSettings,
   PouchDBInstance,
-  RxDumpDatabaseAny,
+  PouchSettings,
+  RxCollectionCreator,
   RxDumpCollectionAny,
-  RxDumpCollectionAsAny,
+  RxDumpDatabaseAny,
+  RxJsonSchema,
 } from &#x27;rxdb&#x27;;
-import { AnyObject, NgxRxdbCollectionConfig } from &#x27;./rxdb.interface&#x27;;
+import { AnyFn, NgxRxdbCollectionConfig } from &#x27;./rxdb.interface&#x27;;
 
 export async function infoFn() {
   return await (this.pouch as PouchDBInstance).info();
@@ -379,8 +378,8 @@ export async function countAllDocumentsFn(): Promise&lt;number&gt; {
   return res.rows.length;
 }
 
-export const DEFAULT_INSTANCE_METHODS: { [key: string]: Function } &#x3D; {};
-export const DEFAULT_COLLECTION_METHODS: { [key: string]: Function } &#x3D; {
+export const DEFAULT_INSTANCE_METHODS: { [key: string]: AnyFn } &#x3D; {};
+export const DEFAULT_COLLECTION_METHODS: { [key: string]: AnyFn } &#x3D; {
   info: infoFn,
   countAllDocuments: countAllDocumentsFn,
 };

@@ -147,8 +147,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="88"
-                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:88</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="87"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:87</a></div>
                 </td>
             </tr>
 
@@ -219,8 +219,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="103"
-                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:103</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="102"
+                            class="link-to-prism">/home/travis/build/voznik/ngx-odm/libs/rxdb/src/lib/rxdb.module.ts:102</a></div>
                 </td>
             </tr>
 
@@ -272,8 +272,7 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">// tslint:disable:member-access array-type max-classes-per-file
-import {
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
   ApplicationInitStatus,
   APP_INITIALIZER,
   Inject,
@@ -289,7 +288,7 @@ import { NgxRxdbCollectionService } from &#x27;./rxdb-collection.service&#x27;;
 import { NgxRxdbCollectionConfig, NgxRxdbConfig } from &#x27;./rxdb.interface&#x27;;
 import { NgxRxdbService } from &#x27;./rxdb.service&#x27;;
 import { RXDB_CONFIG } from &#x27;./rxdb.token&#x27;;
-import { logFn, noop } from &#x27;./utils&#x27;;
+import { noop } from &#x27;./utils&#x27;;
 
 /** run at APP_INITIALIZER cycle */
 export function dbInitializerFactory(
@@ -392,7 +391,8 @@ export class NgxRxdbModule {
 
   /**
    * Prevents this module from being incorrectly imported
-   * @param appInitStatus - A class that reflects the state of running {@link https://v7.angular.io/api/core/APP_INITIALIZER|APP_INITIALIZER}s.
+   * @param appInitStatus - A class that reflects the state of
+   * running {@link https://v7.angular.io/api/core/APP_INITIALIZER|APP_INITIALIZER}s.
    * @param parentModule - The parent module
    * @param ngxRxdbConfig - The configuration of the &#x60;NgxRxdbModule&#x60;
    */
@@ -426,7 +426,7 @@ export class NgxRxdbModule {
     // TODO: initialize the service only when this is a Root module (&#x27;forRoot&#x27; was called)
     if (trueNgxRxdbConfig &amp;&amp; !ngxRxdbConfig) {
       from(appInitStatus.donePromise).subscribe(() &#x3D;&gt; {
-        // logFn(&#x27;appInitStatus.donePromise&#x27;);
+        // doSmth
       });
     }
   }
@@ -439,8 +439,8 @@ export class NgxRxdbModule {
   exports: [NgxRxdbAsyncNoZonePipe],
 })
 export class NgxRxdbFeatureModule {
+  /** also init collection via loader */
   constructor(public collectionService: NgxRxdbCollectionService&lt;any&gt;) {
-    // init collection via loader
     this.collectionService.collectionLoaded$().subscribe(noop);
   }
 }
