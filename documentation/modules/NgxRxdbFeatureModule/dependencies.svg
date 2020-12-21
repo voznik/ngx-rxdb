@@ -24,13 +24,13 @@
 <title>cluster_NgxRxdbFeatureModule</title>
 <polygon fill="none" stroke="black" stroke-dasharray="1,5" points="142,-70 142,-268 354,-268 354,-70 142,-70"/>
 </g>
-<g id="clust5" class="cluster">
-<title>cluster_NgxRxdbFeatureModule_exports</title>
-<polygon fill="none" stroke="black" points="150,-208 150,-260 346,-260 346,-208 150,-208"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_NgxRxdbFeatureModule_declarations</title>
 <polygon fill="none" stroke="black" points="152,-78 152,-130 344,-130 344,-78 152,-78"/>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_NgxRxdbFeatureModule_exports</title>
+<polygon fill="none" stroke="black" points="150,-208 150,-260 346,-260 346,-208 150,-208"/>
 </g>
 <!-- NgxRxdbAsyncNoZonePipe -->
 <g id="node1" class="node">
