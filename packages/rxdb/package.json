@@ -17,6 +17,6 @@
     "pouchdb-adapter-idb": "^7.2.2",
     "pouchdb-adapter-memory": "^7.2.2",
     "rxdb": "^9.11.0",
-    "tslib": "2.0.3"
+    "tslib": "2.1.0"
   }
 }
